@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600"><title>film-stage illustration 1</title><g>
+
+<defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#15171f"/><stop offset="1" stop-color="#07080c"/></linearGradient></defs>
+<rect width="800" height="600" fill="url(#bg)"/>
+<rect x="70" y="64" width="660" height="16" fill="#3a3e4d" rx="4"/>
+
+<polygon points="160,96 82,520 238,520" fill="#ffb45a" opacity="0.16"/>
+<rect x="140" y="80" width="40" height="30" fill="#2a2d38" rx="6"/><circle cx="160" cy="114" r="14" fill="#fff3df" />
+<polygon points="320,96 242,520 398,520" fill="#ffb45a" opacity="0.16"/>
+<rect x="300" y="80" width="40" height="30" fill="#2a2d38" rx="6"/><circle cx="320" cy="114" r="14" fill="#fff3df" />
+<polygon points="480,96 402,520 558,520" fill="#ffb45a" opacity="0.16"/>
+<rect x="460" y="80" width="40" height="30" fill="#2a2d38" rx="6"/><circle cx="480" cy="114" r="14" fill="#fff3df" />
+<polygon points="640,96 562,520 718,520" fill="#ffb45a" opacity="0.16"/>
+<rect x="620" y="80" width="40" height="30" fill="#2a2d38" rx="6"/><circle cx="640" cy="114" r="14" fill="#fff3df" />
+<ellipse cx="400" cy="530" rx="340" ry="34" fill="#ffb45a" opacity="0.14"/>
+<rect x="300" y="380" width="200" height="120" fill="#fff3df" rx="8" opacity="0.94"/>
+<polygon points="300,380 500,380 500,352 300,352" fill="#2a2d38" />
+<polygon points="318,352 344,352 328,380 302,380" fill="#ffb45a" /><polygon points="366,352 392,352 376,380 350,380" fill="#ffb45a" /><polygon points="414,352 440,352 424,380 398,380" fill="#ffb45a" /><polygon points="462,352 488,352 472,380 446,380" fill="#ffb45a" />
+<line x1="330" y1="420" x2="470" y2="420" stroke="#3a3e4d" stroke-width="5" stroke-linecap="round" /><line x1="330" y1="446" x2="440" y2="446" stroke="#3a3e4d" stroke-width="5" stroke-linecap="round" /><line x1="330" y1="472" x2="410" y2="472" stroke="#3a3e4d" stroke-width="5" stroke-linecap="round" /></g></svg>

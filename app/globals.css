@@ -1,8 +1,222 @@
 @import "tailwindcss";
-@plugin "daisyui" {
-  themes: light --default, dark --prefersdark;
+
+@plugin "daisyui";
+
+/* Studio themes: warm paper in the light theme, a dimmed soundstage in the dark theme. */
+@plugin "daisyui/theme" {
+  name: "studiolight";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+  --color-base-100: oklch(98.6% 0.008 85);
+  --color-base-200: oklch(95.8% 0.012 85);
+  --color-base-300: oklch(90.5% 0.016 85);
+  --color-base-content: oklch(23% 0.02 60);
+  --color-primary: oklch(74% 0.165 62);
+  --color-primary-content: oklch(21% 0.035 60);
+  --color-secondary: oklch(40% 0.07 215);
+  --color-secondary-content: oklch(97% 0.01 215);
+  --color-accent: oklch(63% 0.19 30);
+  --color-accent-content: oklch(98% 0.01 30);
+  --color-neutral: oklch(25% 0.02 60);
+  --color-neutral-content: oklch(96% 0.01 85);
+  --color-info: oklch(68% 0.12 235);
+  --color-info-content: oklch(20% 0.04 235);
+  --color-success: oklch(70% 0.15 155);
+  --color-success-content: oklch(20% 0.05 155);
+  --color-warning: oklch(83% 0.16 85);
+  --color-warning-content: oklch(26% 0.06 85);
+  --color-error: oklch(62% 0.21 25);
+  --color-error-content: oklch(97% 0.01 25);
+  --radius-selector: 0.5rem;
+  --radius-field: 0.6rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
 }
 
-body {
-  min-height: 100vh;
+@plugin "daisyui/theme" {
+  name: "studiodark";
+  default: false;
+  prefersdark: true;
+  color-scheme: dark;
+  --color-base-100: oklch(19% 0.012 60);
+  --color-base-200: oklch(15.5% 0.01 60);
+  --color-base-300: oklch(25% 0.014 60);
+  --color-base-content: oklch(95% 0.01 85);
+  --color-primary: oklch(77% 0.16 65);
+  --color-primary-content: oklch(20% 0.035 60);
+  --color-secondary: oklch(74% 0.09 210);
+  --color-secondary-content: oklch(18% 0.03 210);
+  --color-accent: oklch(70% 0.17 30);
+  --color-accent-content: oklch(18% 0.03 30);
+  --color-neutral: oklch(30% 0.015 60);
+  --color-neutral-content: oklch(95% 0.01 85);
+  --color-info: oklch(72% 0.12 235);
+  --color-info-content: oklch(18% 0.04 235);
+  --color-success: oklch(74% 0.15 155);
+  --color-success-content: oklch(18% 0.05 155);
+  --color-warning: oklch(84% 0.16 85);
+  --color-warning-content: oklch(24% 0.06 85);
+  --color-error: oklch(68% 0.2 25);
+  --color-error-content: oklch(16% 0.04 25);
+  --radius-selector: 0.5rem;
+  --radius-field: 0.6rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+/* Tailwind's dark: variant follows the studio dark theme. */
+@custom-variant dark (&:where([data-theme="studiodark"], [data-theme="studiodark"] *));
+
+@theme inline {
+  --font-sans: var(--font-dmsans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer components {
+  /* One shared content width so every section lines up with the navbar. */
+  .page-container {
+    width: 100%;
+    max-width: 80rem;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+  @media (min-width: 40rem) {
+    .page-container {
+      padding-inline: 1.5rem;
+    }
+  }
+  @media (min-width: 64rem) {
+    .page-container {
+      padding-inline: 2rem;
+    }
+  }
+
+  /* One heading style for every section title. */
+  .section-title {
+    font-family: var(--font-display);
+    font-size: 1.875rem;
+    line-height: 1.15;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
+  @media (min-width: 40rem) {
+    .section-title {
+      font-size: 2.5rem;
+    }
+  }
+
+  .section-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+  }
+  [data-theme="studiodark"] .section-eyebrow {
+    color: var(--color-primary);
+  }
+
+  .section-lead {
+    color: color-mix(in oklab, var(--color-base-content) 70%, transparent);
+    line-height: 1.7;
+  }
+
+  /* Studio gallery carousel */
+  .gallery-swiper {
+    --swiper-navigation-color: #fff;
+    --swiper-navigation-size: 1.5rem;
+    --swiper-pagination-color: var(--color-primary);
+    --swiper-pagination-bullet-inactive-color: #fff;
+    --swiper-pagination-bullet-inactive-opacity: 0.6;
+  }
+
+  /* Hero slider pagination */
+  .hero-swiper .swiper-pagination {
+    bottom: 1.5rem !important;
+  }
+  .hero-swiper .swiper-pagination-bullet {
+    width: 0.5rem;
+    height: 0.5rem;
+    background: #fff;
+    opacity: 0.55;
+    transition: all 0.25s ease;
+  }
+  .hero-swiper .swiper-pagination-bullet-active {
+    width: 1.75rem;
+    border-radius: 9999px;
+    background: var(--color-primary);
+    opacity: 1;
+  }
+}
+
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes bar-pulse {
+  0%,
+  100% {
+    transform: scaleY(0.3);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+@keyframes beam-sway {
+  0%,
+  100% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 48s linear infinite;
+}
+.animate-spin-brand {
+  animation: spin-slow 2.4s linear infinite;
+}
+.animate-bar-pulse {
+  animation: bar-pulse 1.6s ease-in-out infinite;
+  transform-origin: bottom;
+}
+.animate-beam-sway {
+  animation: beam-sway 7s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-spin-slow,
+  .animate-spin-brand,
+  .animate-bar-pulse,
+  .animate-beam-sway {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
 }

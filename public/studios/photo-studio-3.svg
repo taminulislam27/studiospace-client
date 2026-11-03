@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600"><title>photo-studio illustration 3</title><g>
+
+<defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f5e7eb"/><stop offset="1" stop-color="#ddc0ca"/></linearGradient></defs>
+<rect width="800" height="600" fill="url(#bg)"/>
+<path d="M0 390 Q400 330 800 390 L800 600 L0 600Z" fill="#c79dab" opacity="0.55"/>
+<rect x="280" y="60" width="240" height="16" fill="#2b1e24" />
+<rect x="300" y="76" width="200" height="150" fill="#fff7f9" opacity="0.55"/>
+<polygon points="230,215 440,300 440,430 230,275" fill="#3b7f8c" opacity="0.18"/>
+<line x1="170" y1="280" x2="170" y2="520" stroke="#2b1e24" stroke-width="7" stroke-linecap="round" /><line x1="170" y1="520" x2="130" y2="560" stroke="#2b1e24" stroke-width="7" stroke-linecap="round" /><line x1="170" y1="520" x2="215" y2="560" stroke="#2b1e24" stroke-width="7" stroke-linecap="round" />
+<rect x="105" y="165" width="130" height="120" fill="#2b1e24" rx="12"/><rect x="118" y="178" width="104" height="94" fill="#fff7f9" rx="8"/><circle cx="170" cy="225" r="26" fill="#3b7f8c" opacity="0.35"/>
+<line x1="570" y1="335" x2="520" y2="560" stroke="#2b1e24" stroke-width="7" stroke-linecap="round" /><line x1="570" y1="335" x2="625" y2="560" stroke="#2b1e24" stroke-width="7" stroke-linecap="round" /><line x1="570" y1="335" x2="572" y2="560" stroke="#2b1e24" stroke-width="7" stroke-linecap="round" />
+<rect x="520" y="250" width="100" height="70" fill="#2b1e24" rx="10"/><circle cx="588" cy="285" r="24" fill="#fff7f9" /><circle cx="588" cy="285" r="15" fill="#3b7f8c" /><circle cx="588" cy="285" r="7" fill="#2b1e24" /><rect x="530" y="240" width="24" height="14" fill="#3b7f8c" rx="3"/>
+<ellipse cx="400" cy="560" rx="300" ry="18" fill="#2b1e24" opacity="0.12"/></g></svg>
