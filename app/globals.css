@@ -2,7 +2,6 @@
 
 @plugin "daisyui";
 
-/* Studio themes: warm paper in the light theme, a dimmed soundstage in the dark theme. */
 @plugin "daisyui/theme" {
   name: "studiolight";
   default: true;
@@ -73,7 +72,6 @@
   --noise: 0;
 }
 
-/* Tailwind's dark: variant follows the studio dark theme. */
 @custom-variant dark (&:where([data-theme="studiodark"], [data-theme="studiodark"] *));
 
 @theme inline {
@@ -95,7 +93,6 @@
 }
 
 @layer components {
-  /* One shared content width so every section lines up with the navbar. */
   .page-container {
     width: 100%;
     max-width: 80rem;
@@ -113,7 +110,6 @@
     }
   }
 
-  /* One heading style for every section title. */
   .section-title {
     font-family: var(--font-display);
     font-size: 1.875rem;
@@ -143,7 +139,6 @@
     line-height: 1.7;
   }
 
-  /* Studio gallery carousel */
   .gallery-swiper {
     --swiper-navigation-color: #fff;
     --swiper-navigation-size: 1.5rem;
