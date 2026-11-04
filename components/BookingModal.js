@@ -41,13 +41,11 @@ export default function BookingModal({ open, onClose, studio }) {
     if (!open && dialog.open) dialog.close();
   }, [open]);
 
-  // Each time the modal opens: reset the message, default the date, load taken slots.
   useEffect(() => {
     if (!open) return;
     setError("");
     setDate((d) => d || toDateInput(addDays(new Date(), 1)));
     loadSlots();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open, studioId]);
 
   const start = date && startTime ? new Date(`${date}T${startTime}`) : null;
@@ -55,7 +53,6 @@ export default function BookingModal({ open, onClose, studio }) {
   const hours = start && end && end > start ? (end - start) / 3600000 : 0;
   const subtotal = hours * studio.hourlyRate;
 
-  // Confirmed slots that touch the chosen day, shown so guests can plan around them.
   const dayStart = date ? new Date(`${date}T00:00`) : null;
   const dayEnd = dayStart ? addDays(dayStart, 1) : null;
   const daySlots = dayStart

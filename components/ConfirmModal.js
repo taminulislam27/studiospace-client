@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from "react";
 
-// Custom confirmation dialog (used instead of the browser's confirm()).
 export default function ConfirmModal({
   open,
   title,
@@ -29,7 +28,6 @@ export default function ConfirmModal({
       className="modal"
       onClose={onClose}
       onCancel={(e) => {
-        // Esc must not dismiss the dialog while a request is in flight.
         if (busy) e.preventDefault();
       }}
     >

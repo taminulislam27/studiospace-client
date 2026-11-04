@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 
-// Profile photo with an initials fallback (blocked or broken image URLs).
 export default function Avatar({ user, size = "h-10 w-10" }) {
   const [broken, setBroken] = useState(false);
   const label = user?.name || user?.email || "?";

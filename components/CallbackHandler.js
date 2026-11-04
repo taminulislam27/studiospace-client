@@ -8,7 +8,6 @@ import { safeRedirect } from "@/lib/safe-redirect";
 import { useAuth } from "./AuthProvider";
 import { PageSpinner } from "./Skeletons";
 
-// Landing page after Google sign-in: set the JWT cookie, then continue.
 export default function CallbackHandler() {
   const router = useRouter();
   const next = safeRedirect(useSearchParams().get("redirect"));

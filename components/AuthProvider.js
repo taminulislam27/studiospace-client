@@ -16,8 +16,6 @@ export function AuthProvider({ children }) {
   const syncedFor = useRef(null);
   const loggingOut = useRef(false);
 
-  // Keep the HTTPOnly JWT cookie in step with the BetterAuth session, so a
-  // returning user (or a Google sign-in) always has a token for the Express API.
   useEffect(() => {
     if (!email) {
       syncedFor.current = null;
