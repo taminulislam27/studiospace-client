@@ -1,6 +1,4 @@
 import Link from "next/link";
-
-// Original studio illustration: a stand light throwing a beam onto a clapperboard.
 function StudioIllustration() {
   return (
     <svg
