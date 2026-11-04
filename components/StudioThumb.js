@@ -3,7 +3,6 @@
 import { useState } from "react";
 import CategoryIcon from "./CategoryIcon";
 
-// Small cover image with a category-icon fallback for broken or missing URLs.
 export default function StudioThumb({ src, category, alt = "", className = "h-14 w-14" }) {
   const [broken, setBroken] = useState(false);
   if (!src || broken) {

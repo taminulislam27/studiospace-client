@@ -10,7 +10,6 @@ export default function ThemeToggle() {
 
   useEffect(() => setMounted(true), []);
 
-  // Reserve the space until the saved theme is known, so the navbar never jumps.
   if (!mounted) return <div className="h-9 w-9" aria-hidden="true" />;
 
   const isDark = resolvedTheme === "studiodark";

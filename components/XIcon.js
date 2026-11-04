@@ -1,4 +1,4 @@
-// The current X logo (not the old Twitter bird).
+
 export default function XIcon({ className = "h-4 w-4" }) {
   return (
     <svg
