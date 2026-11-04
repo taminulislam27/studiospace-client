@@ -11,7 +11,6 @@ export default function GoogleButton({ next = "/", label = "Continue with Google
   async function onClick() {
     setBusy(true);
     try {
-      // After Google, /auth/callback issues the JWT cookie and then redirects.
       const { error } = await authClient.signIn.social({
         provider: "google",
         callbackURL: `/auth/callback?redirect=${encodeURIComponent(next)}`,

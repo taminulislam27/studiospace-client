@@ -8,7 +8,6 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 
-// Decorative art is drawn in SVG/CSS so the hero never depends on a remote image.
 function ApertureArt() {
   return (
     <div className="pointer-events-none absolute -right-24 top-1/2 hidden -translate-y-1/2 text-white/25 md:block lg:-right-10">
