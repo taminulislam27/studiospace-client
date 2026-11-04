@@ -85,7 +85,6 @@ export default function StudioDetails() {
     return () => controller.abort();
   }, [id, attempt]);
 
-  // Quietly refresh the rating after a new review (no loading flash).
   const refreshStudio = useCallback(() => {
     api(`/studios/${id}`)
       .then((studio) => setState({ status: "ready", studio }))

@@ -36,7 +36,6 @@ export default function StudiosExplorer() {
     [paramString, pathname, router]
   );
 
-  // Debounce typing in the search box before it hits the URL (and the API).
   useEffect(() => {
     if (search.trim() === q) return;
     const id = setTimeout(() => updateParams({ q: search.trim() }), 350);

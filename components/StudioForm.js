@@ -11,7 +11,6 @@ import { useAuth } from "./AuthProvider";
 
 const MAX_FILE_MB = 8;
 
-// Shared by Add New Studio (create) and Update Studio (edit).
 export default function StudioForm({ studio }) {
   const router = useRouter();
   const { user } = useAuth();
@@ -36,7 +35,6 @@ export default function StudioForm({ studio }) {
 
   const set = (key) => (e) => setForm((f) => ({ ...f, [key]: e.target.value }));
 
-  // Suggested amenities plus any custom ones already chosen.
   const amenityOptions = [
     ...AMENITIES,
     ...amenities.filter((a) => !AMENITIES.includes(a)),
