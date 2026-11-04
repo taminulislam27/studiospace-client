@@ -1,6 +1,5 @@
 import Link from "next/link";
 
-// Friendly empty state with an optional call-to-action link or button.
 export default function EmptyState({
   icon: Icon,
   title,

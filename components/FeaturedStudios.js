@@ -16,7 +16,6 @@ export default function FeaturedStudios() {
     const controller = new AbortController();
     setState({ status: "loading", studios: [] });
 
-    // Top-rated first, newest as the tie-breaker; the server applies .limit(6).
     api("/studios?limit=6&sort=rating", { signal: controller.signal })
       .then((studios) => setState({ status: "ready", studios }))
       .catch((err) => {
