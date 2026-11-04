@@ -2,7 +2,6 @@
 
 import { LuStar } from "react-icons/lu";
 
-// Read-only star row (rounds to the nearest whole star).
 export function Stars({ value = 0, className = "h-4 w-4" }) {
   const filled = Math.round(Number(value) || 0);
   return (
@@ -23,7 +22,6 @@ export function Stars({ value = 0, className = "h-4 w-4" }) {
   );
 }
 
-// Clickable 1-5 star picker for the review form.
 export function StarInput({ value, onChange }) {
   return (
     <div className="flex items-center gap-1" role="radiogroup" aria-label="Your rating">

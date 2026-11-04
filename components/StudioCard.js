@@ -5,7 +5,6 @@ import { useState } from "react";
 import { LuMapPin, LuStar } from "react-icons/lu";
 import CategoryIcon from "./CategoryIcon";
 
-// Equal-height card: the footer row is pinned to the bottom with mt-auto.
 export default function StudioCard({ studio }) {
   const [broken, setBroken] = useState(false);
   const showImage = studio.image && !broken;

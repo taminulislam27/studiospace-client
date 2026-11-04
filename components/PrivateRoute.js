@@ -5,8 +5,6 @@ import { usePathname, useRouter } from "next/navigation";
 import { useAuth } from "./AuthProvider";
 import { PageSpinner } from "./Skeletons";
 
-// Wraps private pages. While the session is loading we show a spinner, so a
-// logged-in user reloading a private route is never bounced to Login.
 export default function PrivateRoute({ children }) {
   const { user, isPending, loggingOut } = useAuth();
   const router = useRouter();
