@@ -24,7 +24,6 @@ export default function LoginForm() {
   );
   const forgotRef = useRef(null);
 
-  // Already signed in? Skip the form.
   useEffect(() => {
     if (!isPending && user && !busy) router.replace(next);
   }, [isPending, user, busy, next, router]);

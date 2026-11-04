@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { LuAperture } from "react-icons/lu";
 
-// Same size and style everywhere (navbar, footer, auth pages).
 export default function Logo() {
   return (
     <Link
